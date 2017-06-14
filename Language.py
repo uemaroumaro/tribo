@@ -29,6 +29,9 @@ class Language:
        out = subprocess.check_output("echo %s | cabocha %s" %(self.str.encode("shift-jis"), cmd_option), shell=True)
        return out.decode("shift-jis")
     
+    
+    
+    
     def chunk_structured(self, cabocha_xml):
         elem = ET.fromstring(cabocha_xml.encode("utf-8"))
         chunkinfo=[]
